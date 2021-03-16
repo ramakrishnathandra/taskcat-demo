@@ -63,11 +63,6 @@ Metadata:
           - VPCFlowLogsMaxAggregationInterval
           - VPCFlowLogsTrafficType
           - VPCFlowLogsCloudWatchKMSKey
-      - Label:
-          default: Deprecated - NAT Instance Configuration
-        Parameters:
-          - KeyPairName
-          - NATInstanceType
     ParameterLabels:
       AvailabilityZones:
         default: Availability Zones
