@@ -6,7 +6,11 @@ pipeline {
                 echo 'cfn-lint -t templates/aws-vpc.template.yaml'
             }
         }
-
+        stage('Unittesting') {
+            steps {
+                echo 'taskcat test run'
+            }
+        }
     }
     post { 
         always { 
