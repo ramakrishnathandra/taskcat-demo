@@ -177,14 +177,6 @@ Parameters:
     Default: 'false'
     Description: Set to true to create VPC flow logs for the VPC and publish them to CloudWatch. If false, VPC flow logs will not be created.
     Type: String
-  KeyPairName:
-    Default: deprecated
-    Description: Deprecated. NAT gateways are now supported in all regions.
-    Type: String
-  NATInstanceType:
-    Default: deprecated
-    Description: Deprecated. NAT gateways are now supported in all regions.
-    Type: String
   NumberOfAZs:
     AllowedValues:
       - '2'
