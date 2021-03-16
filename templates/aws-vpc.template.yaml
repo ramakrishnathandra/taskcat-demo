@@ -81,10 +81,6 @@ Metadata:
         default: Create public subnets
       CreateVPCFlowLogsToCloudWatch:
         default: Create VPC Flow Logs (CloudWatch)
-      KeyPairName:
-        default: 'Deprecated: Key pair name'
-      NATInstanceType:
-        default: 'Deprecated: NAT instance type'
       NumberOfAZs:
         default: Number of Availability Zones
       PrivateSubnet1ACIDR:
