@@ -1,3 +1,5 @@
+def awsCredentials = [[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-personal']]
+
 pipeline {
     agent any
     stages {
@@ -8,7 +10,9 @@ pipeline {
         }
         stage('Unittesting') {
             steps {
+                withCredentials(awsCredentials) {
                 sh 'taskcat test run'
+                }    
             }
         }
     }
