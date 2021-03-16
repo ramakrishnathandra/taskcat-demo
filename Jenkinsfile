@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Linting') {
             steps {
-                echo 'Hello World'
+                echo 'cfn-lint -t templates/aws-vpc.template.yaml'
             }
         }
 
