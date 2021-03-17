@@ -11,7 +11,7 @@ pipeline {
         stage('Validate') {
             steps {
                 withCredentials(awsCredentials) {
-                    sh 'aws cloudformation validate-template --template-body file://templates/aws-vpc.template.yaml'
+                    sh 'aws --region us-east-1 cloudformation validate-template --template-body file://templates/aws-vpc.template.yaml'
                 }
             }
         }        
