@@ -10,7 +10,9 @@ pipeline {
         }
         stage('Validate') {
             steps {
-                sh 'aws cloudformation validate-template --template-body file://templates/aws-vpc.template.yaml'
+                withCredentials(awsCredentials) {
+                    sh 'aws cloudformation validate-template --template-body file://templates/aws-vpc.template.yaml'
+                }
             }
         }        
         stage('Unittesting') {
