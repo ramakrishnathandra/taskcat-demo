@@ -4,6 +4,7 @@ project:
   package_lambda: false
   regions:
     - us-east-1
+    - eu-west-1
   s3_bucket: ''
 tests:
   vpc-public-all-possible-regions:
@@ -29,6 +30,7 @@ tests:
       VPCTenancy: default
     regions:
       - us-east-1
+      - eu-west-1
     s3_bucket: ''
     template: templates/aws-vpc.template.yaml
   vpc-private-all-possible-regions:
@@ -54,5 +56,6 @@ tests:
       VPCTenancy: default
     regions:
       - us-east-1
+      - eu-west-1
     s3_bucket: ''
     template: templates/aws-vpc.template.yaml
