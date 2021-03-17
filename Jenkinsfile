@@ -7,14 +7,7 @@ pipeline {
             steps {
                 sh 'cfn-lint -t templates/aws-vpc.template.yaml'
             }
-        }
-        stage('Validate') {
-            steps {
-                withCredentials(awsCredentials) {
-                    sh 'aws --region us-east-1 cloudformation validate-template --template-body file://templates/aws-vpc.template.yaml'
-                }
-            }
-        }        
+        }    
         stage('Unittesting') {
             steps {
                 withCredentials(awsCredentials) {
