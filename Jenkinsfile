@@ -8,10 +8,15 @@ pipeline {
                 sh 'cfn-lint -t templates/aws-vpc.template.yaml'
             }
         }
+        stage('Validate') {
+            steps {
+                sh 'aws cloudformation validate-template --template-body file://templates/aws-vpc.template.yaml'
+            }
+        }        
         stage('Unittesting') {
             steps {
                 withCredentials(awsCredentials) {
-                sh 'taskcat test run'
+                    sh 'taskcat test run'
                 }    
             }
         }
