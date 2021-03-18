@@ -6,7 +6,6 @@ project:
     - us-east-1
     - eu-west-1
   s3_bucket: ''
-  reporting: true
 tests:
   vpc-public-all-possible-regions:
     parameters:
